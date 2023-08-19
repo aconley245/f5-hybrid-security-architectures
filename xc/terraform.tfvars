@@ -4,7 +4,7 @@ xc_tenant = "f5-amer-ent-qyyfhhfj"
 xc_namespace = "a-conley"
 
 #XC LB
-app_domain = "api-demo"
+app_domain = "api-demo.amer-ent.f5demos.com"
 
 #XC WAF
 xc_waf_blocking = true
