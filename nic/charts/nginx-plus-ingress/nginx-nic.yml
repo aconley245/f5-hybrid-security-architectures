@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-aconley-nic-851b-nginx-ingress-5b64864b5c-ttvb5
+  namespace: nginx-ingress
+spec:
+  serviceAccountName: aconley-nic-851b-nginx-ingress
+  imagePullSecrets:
+  - name: regcred
+  automountServiceAccountToken: true
+  securityContext:
+    seccompProfile:
+      type: RuntimeDefault
+  containers:
+  - image: private-registry.nginx.com/nginx-ic/nginx-plus-ingress:3.2.0
+    imagePullPolicy: IfNotPresent
+    name: nginx-plus-ingress
